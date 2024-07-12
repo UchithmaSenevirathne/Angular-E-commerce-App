@@ -1,1 +1,15 @@
-<p>product-details works!</p>
+<app-navbar></app-navbar>
+<main class="container mt-5 mb-5">
+        <div class="row productBox">
+            <div class="col-lg-4 col-12 mt-5">
+                <img src="{{getProductDetails.pdImg}}">
+            </div>
+            <div class="col-lg-8 col-12 mt-5">
+                    <h4>{{getProductDetails.pdName}}</h4>
+                    <p class="mt-3">{{getProductDetails.pdDesc}}</p>
+                    <p class="mt-3 mb-5"><span class="fw-medium"><i class="bi bi-currency-rupee"></i></span> {{getProductDetails.pdPrice | number}}</p>
+                    <button *ngIf="!inCart" class="btn btn-md btn-warning" (click)="addCart(getProductDetails)"><i class="bi bi-bag"></i> Add to Cart </button>
+                    <a *ngIf="inCart" class="btn btn-md btn-warning" routerLink="/cart"><i class="bi bi-bag"></i> Go to Cart </a>
+            </div>
+        </div>
+</main>
