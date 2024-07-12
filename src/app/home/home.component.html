@@ -22,4 +22,24 @@
         </button>
     </div>
     <!-- banner end -->
+
+     <!-- categoris box start  -->
+
+     <div class="container mt-5 mb-5">
+
+        <div class="row categorisBox">
+
+            <div class="col-lg-3 col-6 categorisContent" *ngFor="let data of getCategorisData">
+                <a [routerLink]="['product-page',data.code]">
+                    <img src="{{data.img}}">
+                    <h4>{{data.name}}</h4>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- categoris box end  -->
 </main>
