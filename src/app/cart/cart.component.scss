@@ -1,0 +1,23 @@
+.cartBox
+{
+    background-color: #fff;
+    padding: 50px 50px;   
+}
+
+.cartBox img 
+{
+    width: 100%;
+}
+
+.priceBox
+{
+    background-color: #fff;
+    padding: 30px 30px;
+}
+
+@media screen and (max-width:600px) {
+    .cartBox img 
+{
+    width: 50%;
+}
+}
