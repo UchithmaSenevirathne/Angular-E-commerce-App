@@ -1,1 +1,25 @@
-<p>product-page works!</p>
+<app-navbar></app-navbar>
+<main class="container-fluid mt-5 mb-5">
+
+    <div class="row pageBox">
+
+        <div class="col-lg-4 col-12">
+            <!-- filter  -->
+            <p>Filter</p>
+            <p>Category: {{getParamValue | titlecase}}</p>
+            <p>Subcategory </p>
+            <div class="col-lg-4">
+                <select class="form-select form-select-sm" (change)="filterSelect($event)">
+                    <option value="all">All</option>
+                    <option *ngFor="let data of getSubCategoryOption" value="{{data.subcategories}}">
+                        {{data.subcategories}}</option>
+                </select>
+            </div>
+        </div>
+
+        
+
+
+    </div>
+
+</main>
