@@ -1,0 +1,62 @@
+.categorisBox {
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.categorisBox a {
+    text-decoration: none;
+    color: #000;
+}
+
+.categorisContent {
+    padding: 20px 20px;
+}
+
+.categorisContent img {
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid rgb(54, 16, 244);
+}
+
+.categorisContent h4 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.productBox {
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 5px;
+}
+
+
+
+.productImg {
+    height: 200px;
+    width: 90%;
+}
+
+
+.productContent img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.productContent h4 {
+    font-size: 16px;
+    margin-top: 20px;
+
+}
+
+.productLink {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+}
