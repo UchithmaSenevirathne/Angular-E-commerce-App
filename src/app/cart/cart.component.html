@@ -1,1 +1,67 @@
-<p>cart works!</p>
+<app-navbar [cartCount]="totalCart"></app-navbar>
+<main class="container mt-5 mb-5">
+
+    <div class="bg-white text-center fw-bold mt-5 p-5" *ngIf="totalCart == 0">
+        <h4>cart is empty !</h4>
+    </div>
+
+    <div class="row" *ngIf="totalCart > 0">
+
+
+
+        <div class="col-lg-8 col-12 cartBox">
+            <!-- cart content  -->
+            <div class="row mt-5 mb-5" *ngFor="let data of getCartData">
+                <div class="col-lg-2">
+                    <img src="{{data.pdImg}}">
+                </div>
+                <div class="col-lg-10">
+                    <h5>{{data.pdName}}</h5>
+                    <p class="mt-2 mb-3"><span><i class="bi bi-currency-rupee"></i></span>{{data.pdPrice | number}}</p>
+                    <button class="btn btn-sm btn-danger" (click)="removeCart(data)"><i class="bi bi-trash"></i>
+                        Remove</button>
+
+                        <div class="mt-2 mb-2">
+                            <button class="btn btn-sm btn-dark" [disabled]="data.plusMinusCounter > 1 ? false :true" (click)="plusMinusCount(data,'minus')">-</button>
+                            <input type="number" class="col-lg-1" value="{{data.plusMinusCounter}}" disabled>
+                            <button class="btn btn-sm btn-dark" [disabled]="data.plusMinusCounter < 5 ? false :true " (click)="plusMinusCount(data,'plus')">+</button>   
+                        </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-12 mt-5">
+            <!-- price content  -->
+            <div class="priceBox">
+                <h5 class="fw-bold">Price Details</h5>
+                <hr>
+                <p class="mt-2 mb-2">
+                    <span class="float-start">Price({{totalCart}})</span>
+                    <span class="float-end"><i class="bi bi-currency-rupee"></i> {{totalAmount | number}}</span>
+                </p>
+                <div class="clearfix"></div>
+                <p class="mt-2 mb-2">
+                    <span class="float-start">Delivery</span>
+                    <span class="float-end">Free</span>
+                </p>
+                <div class="clearfix"></div>
+                <hr>
+                <p class="mt-2 mb-2 fw-bold">
+                    <span class="float-start">Total Amount</span>
+                    <span class="float-end"> <i class="bi bi-currency-rupee"></i> {{totalAmount | number}}</span>
+                </p>
+                <div class="clearfix mb-5"></div>
+
+                <button type="button" class="btn btn-md btn-warning col-12" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Place order <i class="bi bi-arrow-right"></i></button>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
