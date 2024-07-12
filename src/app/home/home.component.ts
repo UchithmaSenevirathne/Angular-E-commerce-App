@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GetDataService } from '../service/get-data.service';
 
 @Component({
   selector: 'app-home',
@@ -21,5 +22,7 @@ export class HomeComponent {
       img: '../../assets/images/banner/7dcc28ed89760319.webp',
     },
   ];
+
+  constructor(private getData:GetDataService){}
 
 }
