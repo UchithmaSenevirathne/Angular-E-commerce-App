@@ -17,7 +17,23 @@
             </div>
         </div>
 
-        
+        <div class="col-lg-8 col-12">
+            <!-- product content  -->
+
+            <div class="row pageContent mt-5" *ngFor="let data of filterProductData">
+                <div class="col-lg-4 col-12 mt-3">
+                    <img src="{{data.pdImg}}">
+                </div>
+                <div class="col-lg-8 col-12 mt-5">
+                    <h4>{{data.pdName}}</h4>
+                    <p>{{data.pdDesc}}</p>
+                    <p><span class="fw-medium"><i class="bi bi-currency-rupee"></i></span> {{data.pdPrice | number}}</p>
+                    <a class="btn btn-sm btn-dark" [routerLink]="['/product-detail',data.pdCategory,data.pdId]">view
+                        product <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
 
 
     </div>
