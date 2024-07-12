@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GetDataService } from '../service/get-data.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { GetDataService } from '../service/get-data.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   bannerImgs = [
     {
@@ -23,6 +23,13 @@ export class HomeComponent {
     },
   ];
 
+  getCategorisData:any;
+
   constructor(private getData:GetDataService){}
+
+  ngOnInit(): void {
+    this.getCategorisData = this.getData.categoriesData;
+  }
+
 
 }
