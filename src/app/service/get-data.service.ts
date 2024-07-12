@@ -7,6 +7,23 @@ export class GetDataService {
 
   constructor() { }
 
+  // subcategory data .
+
+  subCategorisFilterData = [
+    { id: 1, categories: 'appliances', subcategories: 'mobile' },
+    { id: 2, categories: 'appliances', subcategories: 'smart tv' },
+    { id: 3, categories: 'appliances', subcategories: 'air cooler' },
+    { id: 4, categories: 'appliances', subcategories: 'refrigerator' },
+    { id: 5, categories: 'fashion', subcategories: 'tshirt' },
+    { id: 6, categories: 'fashion', subcategories: 'jeans' },
+    { id: 7, categories: 'homeandfurniture', subcategories: 'sofa' },
+    { id: 8, categories: 'homeandfurniture', subcategories: 'table' },
+    { id: 9, categories: 'homeandfurniture', subcategories: 'cover' },
+    { id: 10, categories: 'toys', subcategories: 'puzzle' },
+    { id: 11, categories: 'toys', subcategories: 'cars' },
+    { id: 12, categories: 'toys', subcategories: 'toys' }
+  ];
+
    // category data 
    categoriesData = [
     {
